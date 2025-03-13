@@ -7,13 +7,276 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TableLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Riga 1: TextView per ogni colonna -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Colonna 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_lavoro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Lavoro" />
+            </LinearLayout>
+
+            <!-- Colonna 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Sport" />
+            </LinearLayout>
+
+            <!-- Colonna 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_acqua_bevuta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acqua bevuta"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </TableRow>
+
+        <!-- Riga 2: Button per ogni colonna -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Colonna 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/b_lavoro_più"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="b_lavoro"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Colonna 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/b_sport_più"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="b_sport"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Colonna 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/b_acqua_bevuta_più"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="b_acqua_bevuta"
+                    android:text="+" />
+            </LinearLayout>
+        </TableRow>
+
+        <!-- Riga 3: Button per ogni colonna -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Colonna 1 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/b_lavoro_meno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="b_lavoro"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!-- Colonna 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/b_sport_meno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="b_sport"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!-- Colonna 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/b_acqua_bevuta_meno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="b_acqua_bevuta"
+                    android:text="-" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Colonna 1 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_quantità_lavoro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <!-- Colonna 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_quantità_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <!-- Colonna 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_quantità_acqua_bevuta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Colonna 1 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                    <TextView
+                        android:id="@+id/txt_storico_lavoro"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:gravity="left" />
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- Colonna 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                    <TextView
+                        android:id="@+id/txt_storico_sport"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:gravity="left" />
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- Colonna 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+                    <TextView
+                        android:id="@+id/txt_storico_acqua_bevuta"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:gravity="left" />
+                </ScrollView>
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
